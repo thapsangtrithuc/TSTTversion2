@@ -27,7 +27,7 @@ class ThiSinh extends React.Component {
     }
 
     loadUser = () => {
-        let user = this.props.location.state.id;
+        let user = this.props.location.state.user;
         this.setState({user: user});
     }
 

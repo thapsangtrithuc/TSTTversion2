@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import LoginStyle from './Login.css';
 import ThiSinh from '../ThiSinh/ThiSinh';
+import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {username: '', password: ''};
+        this.state = { username: '', password: '' };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.getUserPass = this.getUserPass.bind(this);
@@ -35,18 +37,15 @@ class Login extends Component {
             body: JSON.stringify(data),
         }).then(res => {
             if (res.ok) {
-                res.json().then( user => {
+                res.json().then(user => {
                     console.log(user);
-                    // Kiem tra thi sinh
-                    if (user.fullname != "MC"){}
-                    // <Redirect to={{
-                    //     pathname: '/thisinh',
-                    //     state: {user : user }
-                    //     // access it: this.props.location.state.user
-                    // }}
-                    // />
-                    // Kiem tra MC
-                    }
+                    if (user.fullname != "MC") {
+                        this.props.history.push('/thisinh', { user: user });
+                     }
+                     else{
+                        this.props.history.push('/MC',{user: user});
+                     }
+                }
                 );
             } else {
                 alert("Đăng nhập thất bại");
