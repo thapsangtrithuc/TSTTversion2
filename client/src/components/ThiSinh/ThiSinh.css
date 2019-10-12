@@ -1,0 +1,55 @@
+body {
+    position: absolute;
+    margin: 10px;
+    box-sizing: content-box;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 0;
+  
+}
+
+#container-1 {
+    width: 70%;
+    display: inline-block;
+    background-color: #fee3d9;
+}
+
+#content {
+    height: 85vh;
+}
+#form-answer {
+    margin: 2%;
+}
+#input-answer {
+    width: 88%;
+    height: 60px;
+    font-size: 3.5em;
+}
+
+#button-submit {
+    height: 60px;
+    width: 9%;
+    padding: 0;
+    margin: 0.2% ;
+    vertical-align: top;
+    background-color: #0693cd;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+#container-2 {
+    width: 25%;
+    height: 90vh;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}

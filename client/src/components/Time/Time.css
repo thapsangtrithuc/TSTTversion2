@@ -1,0 +1,27 @@
+
+
+#time-container {
+    width: 100%;    
+    background-color: #fee3d9;
+    border-radius: 5px;
+    vertical-align: center;
+}
+.time-label {
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #810000;
+}
+.time-label h3 {
+    margin: 0;
+    color: white;
+    font-size: 2em;
+}
+#time {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+#time-txt {
+    margin: 0;
+    font-size: 10em;
+}

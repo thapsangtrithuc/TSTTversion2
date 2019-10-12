@@ -1,0 +1,25 @@
+/* @import url(../../stylesheets/fonts/Anton-Regular.ttf); */
+
+        #container-participant {
+            width: 100%;
+            background-color: #fee3d9;
+            border-radius: 5px;
+        }
+
+        .fullname {
+            text-align: center;
+            padding: 10px 30px;
+            background-color: #810000;
+        }
+        .fullname h3 {
+            margin: auto;
+            color: white;
+            font-size: 2em;
+        }
+
+        .point h3{
+            margin: 0;
+            font-size: 8em;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+        }
