@@ -6,7 +6,7 @@ module.exports.login = function (req, res) {
         res.status(200).json(user);
     }).catch((err) => {
         console.log(err);
-        res.json({ 'message': 'login failed' });
+        res.status(404).json({ 'message': 'login failed' });
     })
 }
 

@@ -34,7 +34,8 @@ class Login extends Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
         }).then(res => {
-            res.json().then( user => {
+            if (res.ok) {
+                res.json().then( user => {
                     console.log(user);
                     // Kiem tra thi sinh
                     if (user.fullname != "MC"){}
@@ -45,8 +46,11 @@ class Login extends Component {
                     // }}
                     // />
                     // Kiem tra MC
-                }
-            );
+                    }
+                );
+            } else {
+                alert("Đăng nhập thất bại");
+            }
         }).catch(err => {
             alert('Đăng nhập thất bại!!');
         })
