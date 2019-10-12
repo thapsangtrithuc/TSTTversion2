@@ -36,7 +36,6 @@ class Login extends Component {
         }).then(res => {
             res.json().then( user => {
                 console.log(user)
-                return <Redirect to={ThiSinh}/>;
             }
             );
         }).catch(err => {
