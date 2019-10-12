@@ -42,7 +42,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'user01','pass01','10A1',0,NULL,'Hoàng Trung',0,1),(2,'user02','pass02','11A1',0,NULL,'Trần Hữu Quang Trường',0,1),(3,'user03','pass03','10A2',0,NULL,'Lê Nguyễn Anh Tuấn',0,1),(4,'user04','pass04','11A3',0,NULL,'Đặng Ngọc Trâm Anh',0,1),(5,'user05','pass05','11A1',0,NULL,'Kiều Cao Minh Kiệt',0,2),(6,'user06','pass06','11A1',0,NULL,'Hồ Thị Minh Châu',0,2),(7,'user07','pass07','11A1',0,NULL,'Dương Thị Hải',0,2),(8,'user08','pass08','11B6',0,NULL,'Trần Thị Thu Thấm',0,2),(9,'user09','pass09','10A2',0,NULL,'Nguyễn Thị Thanh Huyền',0,3),(10,'user10','pass10','11A3',0,NULL,'Ngô Thị Minh Tâm',0,3),(11,'user11','pass11','11A1',0,NULL,'Nguyễn Thị Khánh Vy',0,3),(12,'user12','pass12','11A1',0,NULL,'Trần Xuân Vinh Quang',0,3),(13,'usermc','passmc',NULL,0,NULL,NULL,NULL,0);
+INSERT INTO `user` VALUES (1,'user01','pass01','10A1',0,NULL,'Hoàng Trung',0,1),(2,'user02','pass02','11A1',0,NULL,'Trần Hữu Quang Trường',0,1),(3,'user03','pass03','10A2',0,NULL,'Lê Nguyễn Anh Tuấn',0,1),(4,'user04','pass04','11A3',0,NULL,'Đặng Ngọc Trâm Anh',0,1),(5,'user05','pass05','11A1',0,NULL,'Kiều Cao Minh Kiệt',0,2),(6,'user06','pass06','11A1',0,NULL,'Hồ Thị Minh Châu',0,2),(7,'user07','pass07','11A1',0,NULL,'Dương Thị Hải',0,2),(8,'user08','pass08','11B6',0,NULL,'Trần Thị Thu Thấm',0,2),(9,'user09','pass09','10A2',0,NULL,'Nguyễn Thị Thanh Huyền',0,3),(10,'user10','pass10','11A3',0,NULL,'Ngô Thị Minh Tâm',0,3),(11,'user11','pass11','11A1',0,NULL,'Nguyễn Thị Khánh Vy',0,3),(12,'user12','pass12','11A1',0,NULL,'Trần Xuân Vinh Quang',0,3),(13,'usermc','passmc',NULL,0,NULL,'MC',NULL,0),(14,'moderator','passmoderator',NULL,0,NULL,'MODERATOR',NULL,0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-12 22:07:58
+-- Dump completed on 2019-10-13  0:59:35

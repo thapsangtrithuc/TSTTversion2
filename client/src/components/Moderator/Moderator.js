@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ArrayThiSinh from '../ArrayThiSinh/ArrayThiSinh';
+import {Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 
-class MC extends Component {
+
+class Moderator extends Component {
     constructor(props) {
         super(props);
         this.state = { users: {} };
@@ -29,12 +31,17 @@ class MC extends Component {
         console.log(users);
         return (
             <div>
-                <ArrayThiSinh ArrayThiSinh={users} />
-            </div>
+            <Button variant="primary" size="lg" block>
+              Block level button
+            </Button>
+            <Button variant="secondary" size="lg" block>
+              Block level button
+            </Button>
+          </div>
         );
     }
 }
 
-MC.propTypes = {
+Moderator.propTypes = {
 };
-export default MC;
+export default Moderator;
