@@ -35,8 +35,17 @@ class Login extends Component {
             body: JSON.stringify(data),
         }).then(res => {
             res.json().then( user => {
-                console.log(user)
-            }
+                    console.log(user);
+                    // Kiem tra thi sinh
+                    if (user.fullname != "MC"){}
+                    // <Redirect to={{
+                    //     pathname: '/thisinh',
+                    //     state: {user : user }
+                    //     // access it: this.props.location.state.user
+                    // }}
+                    // />
+                    // Kiem tra MC
+                }
             );
         }).catch(err => {
             alert('Đăng nhập thất bại!!');

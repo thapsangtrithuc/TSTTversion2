@@ -26,6 +26,10 @@ class ThiSinh extends React.Component {
         this.loadQuestion = this.loadQuestion.bind(this);
     }
 
+    loadUser = () => {
+        let user = this.props.location.state.id;
+        this.setState({user: user});
+    }
 
     loadQuestion = () => {
         fetch('http://localhost:9000/api/question/' + this.state.user.id).then(
@@ -45,6 +49,7 @@ class ThiSinh extends React.Component {
     }
     componentDidMount = () => {
         connect();
+        this.loadUser();
         this.loadQuestion();
     }
 
