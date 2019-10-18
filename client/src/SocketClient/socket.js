@@ -1,7 +1,10 @@
 import openSocket from 'socket.io-client';
 const socket = openSocket('http://localhost:9000');
 
-export default function connect() {
-    socket.emit('connection');
-    console.log("lele")
+
+const submitAnswer = function(answer) {
+    socket.emit('submitAnswer', answer);
 }
+
+
+export default {submitAnswer}

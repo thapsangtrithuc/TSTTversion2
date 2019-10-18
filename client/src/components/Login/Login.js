@@ -41,10 +41,10 @@ class Login extends Component {
                     console.log(user);
                     if (user.fullname != "MC") {
                         this.props.history.push('/thisinh', { user: user });
-                     }
-                     else{
-                        this.props.history.push('/MC',{user: user});
-                     }
+                    }
+                    else {
+                        this.props.history.push('/MC', { user: user });
+                    }
                 }
                 );
             } else {

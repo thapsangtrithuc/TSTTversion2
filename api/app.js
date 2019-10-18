@@ -10,6 +10,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/userRoute');
 var questionRouter = require('./routes/questionRoute');
+var historyRouter = require('./routes/historyRoute');
 var socketIO = require('socket.io');
 
 // Socket io setup
@@ -34,15 +35,25 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/user', userRouter);
 app.use('/api/question', questionRouter);
+app.use('/api/history', historyRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // Socket io handler
-io.on('connection', function(socket){
+io.on('connection', function (socket) {
   console.log('a user connected');
+
+  // Nhận đáp án từ các thí sinh
+  socket.on('submitAnswer', (answer) => {
+
+  })
+
+
+  socket.on('disconnect', () => {
+    console.log('user disconnected')
+  })
 });
 
 
@@ -50,7 +61,7 @@ io.on('connection', function(socket){
 
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
