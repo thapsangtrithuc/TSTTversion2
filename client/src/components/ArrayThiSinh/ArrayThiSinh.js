@@ -7,13 +7,13 @@ class ArrayThiSinh extends Component {
         const { ArrayThiSinh } = this.props;
         let ArrayThiSinhs = [];
         for(let i in ArrayThiSinh){
-            if(ArrayThiSinh[i].fullname != "MC"){
+            if(ArrayThiSinh[i].round !== 0){
                 ArrayThiSinhs.push(ArrayThiSinh[i]);
             }
         }
         const createTable = () => {
             let table = [];
-            for (let i = 0; i < ArrayThiSinhs.length; i++) {
+            for (let i in ArrayThiSinhs) {
                 let ele = (<div className="thi-sinh" key={i}>
                     <Point id="thi-sinh" key={i}
                      fullname={ArrayThiSinhs[i].fullname} point={ArrayThiSinhs[i].point} />

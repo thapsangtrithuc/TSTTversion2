@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import LoginStyle from './Login.css';
-import ThiSinh from '../ThiSinh/ThiSinh';
-import { Redirect } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
     constructor(props) {
@@ -39,12 +36,16 @@ class Login extends Component {
             if (res.ok) {
                 res.json().then(user => {
                     console.log(user);
-                    if (user.fullname != "MC") {
+                    if (user.round !== 0) {
                         this.props.history.push('/thisinh', { user: user });
-                    }
-                    else {
-                        this.props.history.push('/MC', { user: user });
-                    }
+                     }
+                     else if (user.fullname === "MC"){
+                        this.props.history.push('/round',{user: user});
+                        }
+                        else if (user.fullname === "MODERATOR"){
+                            this.props.history.push('/Moderator',{user: user});
+                        }
+
                 }
                 );
             } else {
