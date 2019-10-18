@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: tstt
+-- Host: 127.0.0.1    Database: tstt
 -- ------------------------------------------------------
 -- Server version	8.0.17
 
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-12 22:07:58
+-- Dump completed on 2019-10-18 17:25:39
